@@ -5082,6 +5082,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1815318737}
+  - component: {fileID: 1815318739}
   - component: {fileID: 1815318736}
   - component: {fileID: 1815318738}
   m_Layer: 0
@@ -5194,6 +5195,22 @@ MonoBehaviour:
   m_LightCookieSize: {x: 1, y: 1}
   m_LightCookieOffset: {x: 0, y: 0}
   m_SoftShadowQuality: 1
+--- !u!114 &1815318739
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1815318735}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee80d46670464aa47811e7bf157b02b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sun: {fileID: 1815318736}
+  dayDuration: 30
+  daySkybox: {fileID: 0}
+  nightSkybox: {fileID: 0}
 --- !u!1001 &1824807961
 PrefabInstance:
   m_ObjectHideFlags: 0
