@@ -4,6 +4,7 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour {
     [SerializeField] float speed; // Set player's movement speed.
     [SerializeField] float rotationSpeed; // Set player's rotation speed.
+    [SerializeField] float jumpForce;
 
     private Rigidbody rb; // Reference to player's Rigidbody.
 
@@ -14,7 +15,7 @@ public class PlayerController : MonoBehaviour {
 
     // Update is called once per frame
     void Update() {
-
+        JumpPlayer();
     }
 
 
@@ -29,5 +30,10 @@ public class PlayerController : MonoBehaviour {
         float turn = Input.GetAxis("Horizontal") * rotationSpeed * Time.fixedDeltaTime;
         Quaternion turnRotation = Quaternion.Euler(0f, turn, 0f);
         rb.MoveRotation(rb.rotation * turnRotation);
+    }
+    public void JumpPlayer() {
+        if (Input.GetButtonDown("Jump")) {
+            rb.AddForce(Vector3.up * jumpForce, ForceMode.VelocityChange);
+        }
     }
 }
